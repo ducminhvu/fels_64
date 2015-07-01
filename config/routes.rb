@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   resources :users
   resources :relationships, only: [:create, :destroy]
+  resources :lessons, only: [:create, :show]
+  resources :lesson_words, only: [:show, :edit, :update]
 
   get "/users/:id/:type" => "relationships#index", as: "follow"
 

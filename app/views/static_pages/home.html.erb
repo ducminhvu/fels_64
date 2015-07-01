@@ -5,4 +5,9 @@
   <h2><%= t("introduce") %></h2>
 
   <%= link_to t("sign_up"), signup_path, class: "btn btn-lg btn-primary" %>
+
+  <%= form_for @lesson do |f| %>
+    <%= f.hidden_field :category_id, value: 1 %>
+    <%= f.submit "Start!", class: "btn btn-primary" %>
+  <% end %>
 </div>
